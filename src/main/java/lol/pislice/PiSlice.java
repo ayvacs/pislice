@@ -26,39 +26,39 @@ public class PiSlice
         return PI_DIGITS;
     }
 
-    private long from;
-    private long to;
+    private long startIndex;
+    private long endIndex;
 
 
     /**
      * Construct a new PiSlice from two <code>long</code>s.
-     * @param numberFrom The beginning of the substring
-     * @param numberTo The end of the substring
+     * @param startIndex The beginning of the substring
+     * @param endIndex The end of the substring
      */
-    public PiSlice (long numberFrom, long numberTo)
+    public PiSlice (long startIndex, long endIndex)
     {
-        from = numberFrom;
-        to = numberTo;
+        this.startIndex = startIndex;
+        this.endIndex = endIndex;
     }
 
     /**
      * Construct a new PiSlice from two <code>integer</code>s.
-     * @param numberFrom The beginning of the substring
-     * @param numberTo The end of the substring
+     * @param startIndex The beginning of the substring
+     * @param endIndex The end of the substring
      */
-    public PiSlice (int numberFrom, int numberTo)
+    public PiSlice (int startIndex, int endIndex)
     {
-        this(Long.valueOf(numberFrom), Long.valueOf(numberTo));
+        this(Long.valueOf(startIndex), Long.valueOf(endIndex));
     }
 
     /**
-     * Construct a new PiSlice from two <code>PiSlice</code>s.
-     * @param numberFrom The beginning of the substring
-     * @param numberTo The end of the substring
+     * Construct a new PiSlice startIndex two <code>PiSlice</code>s.
+     * @param startIndex The beginning of the substring
+     * @param endIndex The end of the substring
      */
-    public PiSlice(PiSlice numberFrom, PiSlice numberTo)
+    public PiSlice(PiSlice startIndex, PiSlice endIndex)
     {
-        this(numberFrom.getLong(), numberTo.getLong());
+        this(startIndex.getLong(), endIndex.getLong());
     }
     
     /** 
@@ -72,12 +72,12 @@ public class PiSlice
 
         try
         {
-            result = Long.parseLong(PI_DIGITS.substring(Math.toIntExact(from), Math.toIntExact(to)));
+            result = Long.parseLong(PI_DIGITS.substring(Math.toIntExact(startIndex), Math.toIntExact(endIndex)));
             return result;
         }
         catch (IndexOutOfBoundsException e)
         {
-            throw new PiSliceException("The indices (" + from + ", " + to + ") have not been defined or are out of bounds for a long.");
+            throw new PiSliceException("The indices (" + startIndex + ", " + endIndex + ") have not been defined or are out of bounds for a long.");
         }
     }
 
@@ -97,7 +97,7 @@ public class PiSlice
         }
         catch (IndexOutOfBoundsException e)
         {
-            throw new PiSliceException("The indices (" + from + ", " + to + ") have not been defined or are out of bounds for an integer.");
+            throw new PiSliceException("The indices (" + startIndex + ", " + endIndex + ") have not been defined or are out of bounds for an integer.");
         }
     }
 
@@ -111,7 +111,7 @@ public class PiSlice
         String s;
 
         try {
-            s = ("(" + from + ", " + to + ") => ") + Long.toString(getLong());
+            s = ("(" + startIndex + ", " + endIndex + ") => ") + Long.toString(getLong());
             return s;
         }
         catch (Exception e)
