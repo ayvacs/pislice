@@ -2,6 +2,8 @@
 
 Extract slices of numbers from the mathematical constant π (pi).
 
+Documentation: [ave.is-a.dev/pislice](https://ave.is-a.dev/pislice)
+
 ```java
 import lol.pislice.*;
 
