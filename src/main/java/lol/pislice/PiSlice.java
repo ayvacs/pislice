@@ -32,10 +32,70 @@ public class PiSlice
         return PI_DIGITS;
     }
 
+        /**
+     * Return the larger instance, as if by calling <code>Math.max</code>.
+     */
+    public static PiSlice max(PiSlice p1, PiSlice p2)
+    {
+        return (p1.getLong() > p2.getLong()) ? p1 : p2;
+    }
+
+    /**
+     * Return the smaller instance, as if by calling <code>Math.min</code>.
+     */
+    public static PiSlice min(PiSlice p1, PiSlice p2)
+    {
+        return (p1.getLong() < p2.getLong()) ? p1 : p2;
+    }
+
+    /**
+     * Return a new PiSlice with each component being the sum of the respective components of the given PiSlices.
+     */
+    public static PiSlice add(PiSlice p1, PiSlice p2)
+    {
+        return new PiSlice(
+            p1.getStartIndex() + p2.getStartIndex(),
+            p1.getEndIndex() + p2.getEndIndex()
+        );
+    }
+
+    /**
+     * Return a new PiSlice with each component being the difference of the respective components of the given PiSlices.
+     */
+    public static PiSlice sub(PiSlice p1, PiSlice p2)
+    {
+        return new PiSlice(
+            p1.getStartIndex() - p2.getStartIndex(),
+            p1.getEndIndex() - p2.getEndIndex()
+        );
+    }
+
+    /**
+     * Return a new PiSlice with each component being the product of the respective components of the given PiSlices.
+     */
+    public static PiSlice mult(PiSlice p1, PiSlice p2)
+    {
+        return new PiSlice(
+            p1.getStartIndex() * p2.getStartIndex(),
+            p1.getEndIndex() * p2.getEndIndex()
+        );
+    }
+
+    /**
+     * Return a new PiSlice with each component being the quotient of the respective components of the given PiSlices.
+     */
+    public static PiSlice div(PiSlice p1, PiSlice p2)
+    {
+        return new PiSlice(
+            p1.getStartIndex() / p2.getStartIndex(),
+            p1.getEndIndex() / p2.getEndIndex()
+        );
+    }
+
 
 
     // ~~~~~~~~~~~~~~~~~~
-    // NON-STATIC FIELDS
+    // NON-STATIC METHODS
     // ~~~~~~~~~~~~~~~~~~
 
 
