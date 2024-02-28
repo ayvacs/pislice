@@ -1,20 +1,18 @@
 package lol.pislice;
 
 
-/**
- * A <code>PiSlice</code> is a representation of a number derived from a substring of π. Internally, <code>PiSlice</code>s are represented by <code>long</code>s and are as such subject to the lower and upper boundaries of -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
- * 
- * A <code>PiSlice</code> can be constructed from two <code>long</code>s, two <code>int</code>s, or two <code>PiSlice</code>s.
- * 
- * The <code>getLong</code> and <code>getInt</code> methods are used to produce their respective types from a <code>PiSlice</code>.
- */
-
-
 import java.lang.IndexOutOfBoundsException;
 import java.lang.Long;
 import java.lang.Math;
 
 
+/**
+ * A <code>PiSlice</code> is a number derived from a substring of π. Internally, <code>PiSlice</code>s are represented by <code>long</code>s and are as such subject to the lower and upper boundaries of -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+ * 
+ * A <code>PiSlice</code> can be constructed from two <code>long</code>s, two <code>int</code>s, or two <code>PiSlice</code>s.
+ * 
+ * The <code>getLong</code> and <code>getInt</code> methods are used to produce their respective types from a <code>PiSlice</code>.
+ */
 public class PiSlice
 {
     // The first 1000 digits of pi without a decimal point
