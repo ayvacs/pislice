@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"lol.pislice","l":"PiSlice"},{"p":"lol.pislice","l":"PiSliceException"}];updateSearchResults();
