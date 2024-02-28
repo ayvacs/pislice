@@ -3,8 +3,16 @@
 Extract slices of numbers from the mathematical constant π (pi).
 
 ```java
-PiSlice myNumber = new PiSlice(2, 4);
-System.out.println(myNumber.getInt()); // 15
+// Instantiate a PiSlice from two integers:
+PiSlice applePie = new PiSlice(2, 4);
+System.out.println(applePie.getInt()); // 15
+
+// You can also instantiate a PiSlice from two PiSlices:
+PiSlice applePie = new PiSlice(
+    new PiSlice(4, 5),
+    new PiSlice(5, 6)
+)
+System.out.println(applePie.toString()); // (5, 9) => 9265
 ```
 
 ## Explanation

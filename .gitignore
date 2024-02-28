@@ -6,3 +6,5 @@ build
 
 # Test code
 src/test
+Main.java
+Main.class

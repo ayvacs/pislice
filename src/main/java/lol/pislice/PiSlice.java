@@ -13,11 +13,19 @@ public class PiSlice
     private int from;
     private int to;
 
-    public PiSlice (int number1, int number2)
+
+    public PiSlice (int numberFrom, int numberTo)
     {
-        from = number1;
-        to = number2;
+        from = numberFrom;
+        to = numberTo;
     }
+
+    public PiSlice(PiSlice numberFrom, PiSlice numberTo)
+    {
+        from = numberFrom.getInt();
+        to = numberTo.getInt();
+    }
+
 
     public int getInt() throws PiSliceException
     {
@@ -31,6 +39,20 @@ public class PiSlice
         catch (IndexOutOfBoundsException e)
         {
             throw new PiSliceException("The indexes (" + from + ", " + to + ") are out of bounds.");
+        }
+    }
+
+    public String toString()
+    {
+        String s;
+
+        try {
+            s = ("(" + from + ", " + to + ") => ") + Integer.toString(getInt());
+            return s;
+        }
+        catch (Exception e)
+        {
+            throw new PiSliceException("Something went amiss");
         }
     }
 }
