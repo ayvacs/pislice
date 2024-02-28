@@ -2,6 +2,7 @@ package lol.pislice;
 
 
 import java.lang.IndexOutOfBoundsException;
+import java.lang.Integer;
 
 
 public class PiSlice
@@ -20,9 +21,12 @@ public class PiSlice
 
     public int decode() throws PiSliceException
     {
+        int result;
+
         try
         {
-            return PI_DIGITS.substring(from, to);
+            result = Integer.parseInt(PI_DIGITS.substring(from, to));
+            return result;
         }
         catch (IndexOutOfBoundsException e)
         {
