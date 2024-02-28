@@ -76,6 +76,11 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">PiSlice</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">A <code>PiSlice</code> is a number derived from a substring of π. Internally, <code>PiSlice</code>s are represented by <code>long</code>s and are as such subject to the lower and upper boundaries of -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+ 
+ A <code>PiSlice</code> can be constructed from two <code>long</code>s, two <code>int</code>s, or two <code>PiSlice</code>s.
+ 
+ The <code>getLong</code> and <code>getInt</code> methods are used to produce their respective types from a <code>PiSlice</code>.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">

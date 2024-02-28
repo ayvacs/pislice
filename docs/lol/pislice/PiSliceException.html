@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">PiSliceException</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></span></div>
+<div class="block">The <code>PiSliceException</code> is thrown when things are amiss. It is thrown instead of the appropriate Java exception (i.e. <code>IndexOutOfBoundsException</code>.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -101,8 +102,14 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String)" class="member-name-link">PiSliceException</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;errorMessage)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">PiSliceException</a>()</code></div>
+<div class="col-last even-row-color">
+<div class="block">Construct a PiSliceException with <code>null</code> as its detail message.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String)" class="member-name-link">PiSliceException</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Construct a PiSliceException with the specified detail message.</div>
+</div>
 </div>
 </section>
 </li>
@@ -128,9 +135,21 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="&lt;init&gt;()">
+<h3>PiSliceException</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSliceException</span>()</div>
+<div class="block">Construct a PiSliceException with <code>null</code> as its detail message.</div>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(java.lang.String)">
 <h3>PiSliceException</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSliceException</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;errorMessage)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSliceException</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="block">Construct a PiSliceException with the specified detail message.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>message</code> - a message with more information.</dd>
+</dl>
 </section>
 </li>
 </ul>
