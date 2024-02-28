@@ -1,5 +1,9 @@
 package lol.pislice;
 
+
+import java.lang.IndexOutOfBoundsException;
+
+
 public class PiSlice
 {
     // The first 100 digits of pi without a decimal point
@@ -16,6 +20,13 @@ public class PiSlice
 
     public int decode()
     {
-        return PI_DIGITS.substring(from, to);
+        try
+        {
+            return PI_DIGITS.substring(from, to);
+        }
+        catch (IndexOutOfBoundsException e)
+        {
+            throw new PiSliceException("The indexes (" + from + ", " + to + ") are out of bounds.");
+        }
     }
 }
