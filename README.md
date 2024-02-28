@@ -1,18 +1,20 @@
-# PiSlice (Java package `lol.pislice`)
+# PiSlice
 
 Extract slices of numbers from the mathematical constant π (pi).
 
 ```java
+import lol.pislice.*;
+
 // Instantiate a PiSlice from two integers:
-PiSlice applePi = new PiSlice(2, 4);
-System.out.println(applePi.getInt()); // 15
+PiSlice applePi = new PiSlice(2, 3);
+System.out.println(applePi.getInt()); // 4
 
 // You can also instantiate a PiSlice from two PiSlices:
-PiSlice applePi = new PiSlice(
-    new PiSlice(4, 5),
+PiSlice pumpkinPi = new PiSlice(
+    applePi,
     new PiSlice(5, 6)
-)
-System.out.println(applePi.toString()); // (5, 9) => 9265
+);
+System.out.println(pumpkinPi.toString()); // (4, 9) => 59265
 ```
 
 ## Implementation
@@ -22,14 +24,14 @@ System.out.println(applePi.toString()); // (5, 9) => 9265
 To decode an `int` value from a `PiSlice` instance, the `getInt` method may be used. This method works exactly as `String.substring`; the substring begins at the specified `startIndex` (first parameter) and extends to the character at index `endIndex - 1`, such that:
 
 ```java
-new PiSlice(2, 4).getInt(); // 15
+new PiSlice(2, 4).getInt(); // 41
 int α = 314159265 ...
-~~~~~~~~~^~^~~~~~~~~~
+~~~~~~~~~~^^~~~~~~~~~
 ```
 
 The `toString` method may be used to display the slice in a more human-friendly format:
 ```java
-new PiSlice(5, 9).toString(); // (5, 9) => 9265
+new PiSlice(5, 9).toString(); // (5, 9) => 59265
 ```
 
 ## Considerations
