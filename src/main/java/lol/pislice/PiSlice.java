@@ -3,6 +3,8 @@ package lol.pislice;
 
 import java.lang.IndexOutOfBoundsException;
 import java.lang.Integer;
+import java.lang.Long;
+import java.lang.Math;
 
 
 public class PiSlice
@@ -20,9 +22,20 @@ public class PiSlice
         return PI_DIGITS;
     }
 
-    private int from;
-    private int to;
+    private long from;
+    private long to;
 
+
+    /**
+     * Create a new PiSlice from two longs.
+     * @param numberFrom The beginning of the substring
+     * @param numberTo The end of the substring
+     */
+    public PiSlice (long numberFrom, long numberTo)
+    {
+        from = numberFrom;
+        to = numberTo;
+    }
 
     /**
      * Create a new PiSlice from two integers.
@@ -31,8 +44,8 @@ public class PiSlice
      */
     public PiSlice (int numberFrom, int numberTo)
     {
-        from = numberFrom;
-        to = numberTo;
+        from = Math.toIntExact(numberFrom);
+        to = Math.toIntExact(numberTo);
     }
 
     /**
@@ -45,10 +58,28 @@ public class PiSlice
         from = numberFrom.getInt();
         to = numberTo.getInt();
     }
-
-
     
     /** 
+     * Parses the PiSlice as a signed decimal long.
+     * @return long
+     * @throws PiSliceException if the indices have not been defined or are out of bounds
+     */
+    public long getLong() throws PiSliceException
+    {
+        long result;
+
+        try
+        {
+            result = Long.parseLong(PI_DIGITS.substring(Math.toIntExact(from), Math.toIntExact(to)));
+            return result;
+        }
+        catch (IndexOutOfBoundsException e)
+        {
+            throw new PiSliceException("The indices (" + from + ", " + to + ") have not been defined or are out of bounds for a long.");
+        }
+    }
+
+     /** 
      * Parses the PiSlice as a signed decimal integer.
      * @return int
      * @throws PiSliceException if the indices have not been defined or are out of bounds
@@ -59,12 +90,12 @@ public class PiSlice
 
         try
         {
-            result = Integer.parseInt(PI_DIGITS.substring(from, to));
+            result = Math.toIntExact(getLong());
             return result;
         }
         catch (IndexOutOfBoundsException e)
         {
-            throw new PiSliceException("The indices (" + from + ", " + to + ") have not been defined or are out of bounds.");
+            throw new PiSliceException("The indices (" + from + ", " + to + ") have not been defined or are out of bounds for an integer.");
         }
     }
 
@@ -78,7 +109,7 @@ public class PiSlice
         String s;
 
         try {
-            s = ("(" + from + ", " + to + ") => ") + Integer.toString(getInt());
+            s = ("(" + from + ", " + to + ") => ") + Long.toString(getLong());
             return s;
         }
         catch (Exception e)
