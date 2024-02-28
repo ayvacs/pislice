@@ -18,7 +18,7 @@ public class PiSlice
         to = number2;
     }
 
-    public int decode()
+    public int decode() throws PiSliceException
     {
         try
         {
