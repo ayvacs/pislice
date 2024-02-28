@@ -92,9 +92,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Create a new PiSlice from two integers.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(lol.pislice.PiSlice,lol.pislice.PiSlice)" class="member-name-link">PiSlice</a><wbr>(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;numberFrom,
- <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;numberTo)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(long,long)" class="member-name-link">PiSlice</a><wbr>(long&nbsp;numberFrom,
+ long&nbsp;numberTo)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Create a new PiSlice from two longs.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(lol.pislice.PiSlice,lol.pislice.PiSlice)" class="member-name-link">PiSlice</a><wbr>(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;numberFrom,
+ <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;numberTo)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Create a new PiSlice from two PiSlices.</div>
 </div>
 </div>
@@ -121,9 +126,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parses the PiSlice as a signed decimal integer.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLong()" class="member-name-link">getLong</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Parses the PiSlice as a signed decimal long.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a String object representing this object's value in a human-friendly format.</div>
 </div>
 </div>
@@ -143,6 +153,19 @@ loadScripts(document, 'script');</script>
 <section class="constructor-details" id="constructor-detail">
 <h2>Constructor Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;(long,long)">
+<h3>PiSlice</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSlice</span><wbr><span class="parameters">(long&nbsp;numberFrom,
+ long&nbsp;numberTo)</span></div>
+<div class="block">Create a new PiSlice from two longs.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>numberFrom</code> - The beginning of the substring</dd>
+<dd><code>numberTo</code> - The end of the substring</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="&lt;init&gt;(int,int)">
 <h3>PiSlice</h3>
@@ -185,6 +208,20 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>String</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLong()">
+<h3>getLong</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getLong</span>()
+             throws <span class="exceptions"><a href="PiSliceException.html" title="class in lol.pislice">PiSliceException</a></span></div>
+<div class="block">Parses the PiSlice as a signed decimal long.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>long</dd>
+<dt>Throws:</dt>
+<dd><code><a href="PiSliceException.html" title="class in lol.pislice">PiSliceException</a></code> - if the indices have not been defined or are out of bounds</dd>
 </dl>
 </section>
 </li>
