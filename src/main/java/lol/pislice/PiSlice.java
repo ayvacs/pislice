@@ -8,10 +8,8 @@ import java.lang.Math;
 
 /**
  * A <code>PiSlice</code> is a number derived from a substring of π. Internally, <code>PiSlice</code>s are represented by <code>long</code>s and are as such subject to the lower and upper boundaries of -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
- * 
- * A <code>PiSlice</code> can be constructed from two <code>long</code>s, two <code>int</code>s, or two <code>PiSlice</code>s.
- * 
- * The <code>getLong</code> and <code>getInt</code> methods are used to produce their respective types from a <code>PiSlice</code>.
+ * <p>
+ * To produce a <code>long</code> value from a <code>PiSlice</code> instance, the <code>getLong</code> method may be used. Similarly, <code>getInt</code> is used to produce an <code>int</code>. Both methods works exactly as <code>String.substring</code>; the substring begins at the specified <code>startIndex</code> (first parameter) and extends to the character at one less than the specified <code>endIndex</code> (second parameter). Thus, the length of the substring is <code>endIndex - startIndex</code>.
  */
 public class PiSlice
 {
@@ -20,7 +18,7 @@ public class PiSlice
 
     
     /**
-     * Return the inner representation of π without a decimal point.
+     * Return the internal representation of π without a decimal point.
      * @return String
      */
     public static String getCap()
@@ -33,7 +31,7 @@ public class PiSlice
 
 
     /**
-     * Create a new PiSlice from two longs.
+     * Construct a new PiSlice from two <code>long</code>s.
      * @param numberFrom The beginning of the substring
      * @param numberTo The end of the substring
      */
@@ -44,25 +42,23 @@ public class PiSlice
     }
 
     /**
-     * Create a new PiSlice from two integers.
+     * Construct a new PiSlice from two <code>integer</code>s.
      * @param numberFrom The beginning of the substring
      * @param numberTo The end of the substring
      */
     public PiSlice (int numberFrom, int numberTo)
     {
-        from = Math.toIntExact(numberFrom);
-        to = Math.toIntExact(numberTo);
+        this(Long.valueOf(numberFrom), Long.valueOf(numberTo));
     }
 
     /**
-     * Create a new PiSlice from two PiSlices.
+     * Construct a new PiSlice from two <code>PiSlice</code>s.
      * @param numberFrom The beginning of the substring
      * @param numberTo The end of the substring
      */
     public PiSlice(PiSlice numberFrom, PiSlice numberTo)
     {
-        from = numberFrom.getInt();
-        to = numberTo.getInt();
+        this(numberFrom.getLong(), numberTo.getLong());
     }
     
     /** 
