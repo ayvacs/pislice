@@ -90,20 +90,20 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int)" class="member-name-link">PiSlice</a><wbr>(int&nbsp;numberFrom,
- int&nbsp;numberTo)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int)" class="member-name-link">PiSlice</a><wbr>(int&nbsp;startIndex,
+ int&nbsp;endIndex)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Construct a new PiSlice from two <code>integer</code>s.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(long,long)" class="member-name-link">PiSlice</a><wbr>(long&nbsp;numberFrom,
- long&nbsp;numberTo)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(long,long)" class="member-name-link">PiSlice</a><wbr>(long&nbsp;startIndex,
+ long&nbsp;endIndex)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Construct a new PiSlice from two <code>long</code>s.</div>
 </div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(lol.pislice.PiSlice,lol.pislice.PiSlice)" class="member-name-link">PiSlice</a><wbr>(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;numberFrom,
- <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;numberTo)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(lol.pislice.PiSlice,lol.pislice.PiSlice)" class="member-name-link">PiSlice</a><wbr>(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;startIndex,
+ <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;endIndex)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Construct a new PiSlice from two <code>PiSlice</code>s.</div>
+<div class="block">Construct a new PiSlice startIndex two <code>PiSlice</code>s.</div>
 </div>
 </div>
 </section>
@@ -122,17 +122,27 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getCap()" class="member-name-link">getCap</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Return the internal representation of π without a decimal point.</div>
+<div class="block">Get the internal representation of π without a decimal point.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInt()" class="member-name-link">getInt</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEndIndex()" class="member-name-link">getEndIndex</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the substring's internal upper bound</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInt()" class="member-name-link">getInt</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parses the PiSlice as a signed decimal integer.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLong()" class="member-name-link">getLong</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLong()" class="member-name-link">getLong</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parses the PiSlice as a signed decimal long.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStartIndex()" class="member-name-link">getStartIndex</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the substring's internal lower bound</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -159,39 +169,39 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(long,long)">
 <h3>PiSlice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSlice</span><wbr><span class="parameters">(long&nbsp;numberFrom,
- long&nbsp;numberTo)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSlice</span><wbr><span class="parameters">(long&nbsp;startIndex,
+ long&nbsp;endIndex)</span></div>
 <div class="block">Construct a new PiSlice from two <code>long</code>s.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>numberFrom</code> - The beginning of the substring</dd>
-<dd><code>numberTo</code> - The end of the substring</dd>
+<dd><code>startIndex</code> - The beginning of the substring</dd>
+<dd><code>endIndex</code> - The end of the substring</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="&lt;init&gt;(int,int)">
 <h3>PiSlice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSlice</span><wbr><span class="parameters">(int&nbsp;numberFrom,
- int&nbsp;numberTo)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSlice</span><wbr><span class="parameters">(int&nbsp;startIndex,
+ int&nbsp;endIndex)</span></div>
 <div class="block">Construct a new PiSlice from two <code>integer</code>s.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>numberFrom</code> - The beginning of the substring</dd>
-<dd><code>numberTo</code> - The end of the substring</dd>
+<dd><code>startIndex</code> - The beginning of the substring</dd>
+<dd><code>endIndex</code> - The end of the substring</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="&lt;init&gt;(lol.pislice.PiSlice,lol.pislice.PiSlice)">
 <h3>PiSlice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSlice</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;numberFrom,
- <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;numberTo)</span></div>
-<div class="block">Construct a new PiSlice from two <code>PiSlice</code>s.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PiSlice</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;startIndex,
+ <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;endIndex)</span></div>
+<div class="block">Construct a new PiSlice startIndex two <code>PiSlice</code>s.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>numberFrom</code> - The beginning of the substring</dd>
-<dd><code>numberTo</code> - The end of the substring</dd>
+<dd><code>startIndex</code> - The beginning of the substring</dd>
+<dd><code>endIndex</code> - The end of the substring</dd>
 </dl>
 </section>
 </li>
@@ -207,7 +217,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getCap()">
 <h3>getCap</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCap</span>()</div>
-<div class="block">Return the internal representation of π without a decimal point.</div>
+<div class="block">Get the internal representation of π without a decimal point.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>String</dd>
@@ -252,6 +262,28 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 <dt>Returns:</dt>
 <dd>String</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStartIndex()">
+<h3>getStartIndex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getStartIndex</span>()</div>
+<div class="block">Get the substring's internal lower bound</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>long</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEndIndex()">
+<h3>getEndIndex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getEndIndex</span>()</div>
+<div class="block">Get the substring's internal upper bound</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>long</dd>
 </dl>
 </section>
 </li>
