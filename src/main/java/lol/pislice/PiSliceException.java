@@ -5,7 +5,7 @@ import java.lang.RuntimeException;
 /**
  * The <code>PiSliceException</code> is thrown when things are amiss. It is
  * thrown instead of the appropriate Java exception (i.e.
- * <code>IndexOutOfBoundsException</code>.
+ * <code>IndexOutOfBoundsException</code>).
  */
 public class PiSliceException extends RuntimeException {
     /**

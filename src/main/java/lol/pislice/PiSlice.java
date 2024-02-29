@@ -6,8 +6,8 @@ import java.lang.Math;
 
 /**
  * A <code>PiSlice</code> is a number derived from a substring of π. Internally,
- * <code>PiSlice</code>s are represented by <code>long</code>s and are as such
- * subject to the lower and upper boundaries of -9,223,372,036,854,775,808 to
+ * <code>PiSlice</code>s are defined by upper and lower "substring boundaries" stored as <code>long</code>s, and are as such
+ * subject to the lower and upper boundaries of the <code>long</code> type: -9,223,372,036,854,775,808 to
  * 9,223,372,036,854,775,807.
  * <p>
  * To produce a <code>long</code> value from a <code>PiSlice</code> instance,
@@ -37,6 +37,8 @@ public class PiSlice {
 
     /**
      * Return the larger instance, as if by calling <code>Math.max</code>.
+     * 
+     * @return the larger instance
      */
     public static PiSlice max(PiSlice p1, PiSlice p2) {
         return (p1.getLong() > p2.getLong()) ? p1 : p2;
@@ -44,6 +46,8 @@ public class PiSlice {
 
     /**
      * Return the smaller instance, as if by calling <code>Math.min</code>.
+     * 
+     * @return the smaller instance
      */
     public static PiSlice min(PiSlice p1, PiSlice p2) {
         return (p1.getLong() < p2.getLong()) ? p1 : p2;
@@ -51,7 +55,10 @@ public class PiSlice {
 
     /**
      * Return a new PiSlice with each component being the sum of the respective
-     * components of the given PiSlices.
+     * components of the given PiSlices. (equivalent to the <code>+</code> operator)
+     * 
+     * @return a new PiSlice whose components are the sum of the respective
+     *         components of the given PiSlices
      */
     public static PiSlice add(PiSlice p1, PiSlice p2) {
         return new PiSlice(
@@ -61,7 +68,11 @@ public class PiSlice {
 
     /**
      * Return a new PiSlice with each component being the difference of the
-     * respective components of the given PiSlices.
+     * respective components of the given PiSlices. (equivalent to the
+     * <code>-</code> operator)
+     * 
+     * @return a new PiSlice whose components are the difference of the respective
+     *         components of the given PiSlices
      */
     public static PiSlice sub(PiSlice p1, PiSlice p2) {
         return new PiSlice(
@@ -71,7 +82,10 @@ public class PiSlice {
 
     /**
      * Return a new PiSlice with each component being the product of the respective
-     * components of the given PiSlices.
+     * components of the given PiSlices. (equivalent to the <code>*</code> operator)
+     * 
+     * @return a new PiSlice whose components are the product of the respective
+     *         components of the given PiSlices
      */
     public static PiSlice mult(PiSlice p1, PiSlice p2) {
         return new PiSlice(
@@ -81,7 +95,10 @@ public class PiSlice {
 
     /**
      * Return a new PiSlice with each component being the quotient of the respective
-     * components of the given PiSlices.
+     * components of the given PiSlices. (equivalent to the <code>/</code> operator)
+     * 
+     * @return a new PiSlice whose components are the quotient of the respective
+     *         components of the given PiSlices
      */
     public static PiSlice div(PiSlice p1, PiSlice p2) {
         return new PiSlice(
@@ -99,7 +116,7 @@ public class PiSlice {
     /**
      * Parses the PiSlice as a signed decimal long.
      * 
-     * @return long
+     * @return a signed decimal long representation
      * @throws PiSliceException if the indices have not been defined or are out of
      *                          bounds
      */
@@ -118,7 +135,7 @@ public class PiSlice {
     /**
      * Parses the PiSlice as a signed decimal integer.
      * 
-     * @return int
+     * @return a signed decimal integer representation
      * @throws PiSliceException if the indices have not been defined or are out of
      *                          bounds
      */
@@ -138,7 +155,7 @@ public class PiSlice {
      * Returns a String object representing this object's value in a human-friendly
      * format.
      * 
-     * @return String
+     * @return a human-friendly String representation
      */
     public String toString() {
         String s;
@@ -154,7 +171,7 @@ public class PiSlice {
     /**
      * Get the substring's internal lower bound
      * 
-     * @return long
+     * @return the substring's internal lower bound
      */
     public long getStartIndex() {
         return startIndex;
@@ -163,7 +180,7 @@ public class PiSlice {
     /**
      * Get the substring's internal upper bound
      * 
-     * @return long
+     * @return the substring's internal upper bound
      */
     public long getEndIndex() {
         return endIndex;
@@ -176,8 +193,8 @@ public class PiSlice {
     /**
      * Construct a new PiSlice from two <code>long</code>s.
      * 
-     * @param startIndex The beginning of the substring
-     * @param endIndex   The end of the substring
+     * @param startIndex the start index of the substring
+     * @param endIndex   the end index of the substring
      */
     public PiSlice(long startIndex, long endIndex) {
         this.startIndex = startIndex;
@@ -187,8 +204,8 @@ public class PiSlice {
     /**
      * Construct a new PiSlice from two <code>integer</code>s.
      * 
-     * @param startIndex The beginning of the substring
-     * @param endIndex   The end of the substring
+     * @param startIndex the start index of the substring
+     * @param endIndex   the end index of the substring
      */
     public PiSlice(int startIndex, int endIndex) {
         this(Long.valueOf(startIndex), Long.valueOf(endIndex));
@@ -197,8 +214,8 @@ public class PiSlice {
     /**
      * Construct a new PiSlice startIndex two <code>PiSlice</code>s.
      * 
-     * @param startIndex The beginning of the substring
-     * @param endIndex   The end of the substring
+     * @param startIndex the start index of the substring
+     * @param endIndex   the end index of the substring
      */
     public PiSlice(PiSlice startIndex, PiSlice endIndex) {
         this(startIndex.getLong(), endIndex.getLong());
