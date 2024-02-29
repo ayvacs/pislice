@@ -77,8 +77,8 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">PiSlice</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block">A <code>PiSlice</code> is a number derived from a substring of π. Internally,
- <code>PiSlice</code>s are represented by <code>long</code>s and are as such
- subject to the lower and upper boundaries of -9,223,372,036,854,775,808 to
+ <code>PiSlice</code>s are defined by upper and lower "substring boundaries" stored as <code>long</code>s, and are as such
+ subject to the lower and upper boundaries of the <code>long</code> type: -9,223,372,036,854,775,808 to
  9,223,372,036,854,775,807.
  <p>
  To produce a <code>long</code> value from a <code>PiSlice</code> instance,
@@ -224,8 +224,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Construct a new PiSlice from two <code>long</code>s.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>startIndex</code> - The beginning of the substring</dd>
-<dd><code>endIndex</code> - The end of the substring</dd>
+<dd><code>startIndex</code> - the start index of the substring</dd>
+<dd><code>endIndex</code> - the end index of the substring</dd>
 </dl>
 </section>
 </li>
@@ -237,8 +237,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Construct a new PiSlice from two <code>integer</code>s.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>startIndex</code> - The beginning of the substring</dd>
-<dd><code>endIndex</code> - The end of the substring</dd>
+<dd><code>startIndex</code> - the start index of the substring</dd>
+<dd><code>endIndex</code> - the end index of the substring</dd>
 </dl>
 </section>
 </li>
@@ -250,8 +250,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Construct a new PiSlice startIndex two <code>PiSlice</code>s.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>startIndex</code> - The beginning of the substring</dd>
-<dd><code>endIndex</code> - The end of the substring</dd>
+<dd><code>startIndex</code> - the start index of the substring</dd>
+<dd><code>endIndex</code> - the end index of the substring</dd>
 </dl>
 </section>
 </li>
@@ -280,6 +280,10 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">max</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
 <div class="block">Return the larger instance, as if by calling <code>Math.max</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the larger instance</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -288,6 +292,10 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">min</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
 <div class="block">Return the smaller instance, as if by calling <code>Math.min</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the smaller instance</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -296,7 +304,12 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">add</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
 <div class="block">Return a new PiSlice with each component being the sum of the respective
- components of the given PiSlices.</div>
+ components of the given PiSlices. (equivalent to the <code>+</code> operator)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new PiSlice whose components are the sum of the respective
+         components of the given PiSlices</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -305,7 +318,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">sub</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
 <div class="block">Return a new PiSlice with each component being the difference of the
- respective components of the given PiSlices.</div>
+ respective components of the given PiSlices. (equivalent to the
+ <code>-</code> operator)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new PiSlice whose components are the difference of the respective
+         components of the given PiSlices</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -314,7 +333,12 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">mult</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
 <div class="block">Return a new PiSlice with each component being the product of the respective
- components of the given PiSlices.</div>
+ components of the given PiSlices. (equivalent to the <code>*</code> operator)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new PiSlice whose components are the product of the respective
+         components of the given PiSlices</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -323,7 +347,12 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">div</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
 <div class="block">Return a new PiSlice with each component being the quotient of the respective
- components of the given PiSlices.</div>
+ components of the given PiSlices. (equivalent to the <code>/</code> operator)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new PiSlice whose components are the quotient of the respective
+         components of the given PiSlices</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -334,7 +363,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Parses the PiSlice as a signed decimal long.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>long</dd>
+<dd>a signed decimal long representation</dd>
 <dt>Throws:</dt>
 <dd><code><a href="PiSliceException.html" title="class in lol.pislice">PiSliceException</a></code> - if the indices have not been defined or are out of
                           bounds</dd>
@@ -349,7 +378,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Parses the PiSlice as a signed decimal integer.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>int</dd>
+<dd>a signed decimal integer representation</dd>
 <dt>Throws:</dt>
 <dd><code><a href="PiSliceException.html" title="class in lol.pislice">PiSliceException</a></code> - if the indices have not been defined or are out of
                           bounds</dd>
@@ -366,7 +395,7 @@ loadScripts(document, 'script');</script>
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 <dt>Returns:</dt>
-<dd>String</dd>
+<dd>a human-friendly String representation</dd>
 </dl>
 </section>
 </li>
@@ -377,7 +406,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Get the substring's internal lower bound</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>long</dd>
+<dd>the substring's internal lower bound</dd>
 </dl>
 </section>
 </li>
@@ -388,7 +417,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Get the substring's internal upper bound</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>long</dd>
+<dd>the substring's internal upper bound</dd>
 </dl>
 </section>
 </li>
