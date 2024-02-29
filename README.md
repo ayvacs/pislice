@@ -32,6 +32,10 @@ To produce a `long` value from a `PiSlice` instance, the `getLong` method may be
 * A `PiSliceException` will be thrown when things are amiss
 * Keep in mind Java's long limit (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807)
 
+## Build
+
+Grab a prebuilt .jar from the [releases page](https://github.com/ayvacs/pislice/releases/latest), or build it yourself using gradle
+
 ## License
 
 Licensed under the Unlicense. This is free and unencumbered software released into the public domain.
