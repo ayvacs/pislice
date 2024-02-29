@@ -76,9 +76,18 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">PiSlice</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">A <code>PiSlice</code> is a number derived from a substring of π. Internally, <code>PiSlice</code>s are represented by <code>long</code>s and are as such subject to the lower and upper boundaries of -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+<div class="block">A <code>PiSlice</code> is a number derived from a substring of π. Internally,
+ <code>PiSlice</code>s are represented by <code>long</code>s and are as such
+ subject to the lower and upper boundaries of -9,223,372,036,854,775,808 to
+ 9,223,372,036,854,775,807.
  <p>
- To produce a <code>long</code> value from a <code>PiSlice</code> instance, the <code>getLong</code> method may be used. Similarly, <code>getInt</code> is used to produce an <code>int</code>. Both methods works exactly as <code>String.substring</code>; the substring begins at the specified <code>startIndex</code> (first parameter) and extends to the character at one less than the specified <code>endIndex</code> (second parameter). Thus, the length of the substring is <code>endIndex - startIndex</code>.</div>
+ To produce a <code>long</code> value from a <code>PiSlice</code> instance,
+ the <code>getLong</code> method may be used. Similarly, <code>getInt</code>
+ is used to produce an <code>int</code>. Both methods works exactly as
+ <code>String.substring</code>; the substring begins at the specified
+ <code>startIndex</code> (first parameter) and extends to the character at one
+ less than the specified <code>endIndex</code> (second parameter). Thus, the
+ length of the substring is <code>endIndex - startIndex</code>.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,13 +132,15 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#add(lol.pislice.PiSlice,lol.pislice.PiSlice)" class="member-name-link">add</a><wbr>(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Return a new PiSlice with each component being the sum of the respective components of the given PiSlices.</div>
+<div class="block">Return a new PiSlice with each component being the sum of the respective
+ components of the given PiSlices.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#div(lol.pislice.PiSlice,lol.pislice.PiSlice)" class="member-name-link">div</a><wbr>(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Return a new PiSlice with each component being the quotient of the respective components of the given PiSlices.</div>
+<div class="block">Return a new PiSlice with each component being the quotient of the respective
+ components of the given PiSlices.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getCap()" class="member-name-link">getCap</a>()</code></div>
@@ -172,18 +183,21 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#mult(lol.pislice.PiSlice,lol.pislice.PiSlice)" class="member-name-link">mult</a><wbr>(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Return a new PiSlice with each component being the product of the respective components of the given PiSlices.</div>
+<div class="block">Return a new PiSlice with each component being the product of the respective
+ components of the given PiSlices.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sub(lol.pislice.PiSlice,lol.pislice.PiSlice)" class="member-name-link">sub</a><wbr>(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Return a new PiSlice with each component being the difference of the respective components of the given PiSlices.</div>
+<div class="block">Return a new PiSlice with each component being the difference of the
+ respective components of the given PiSlices.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns a String object representing this object's value in a human-friendly format.</div>
+<div class="block">Returns a String object representing this object's value in a human-friendly
+ format.</div>
 </div>
 </div>
 </div>
@@ -281,7 +295,8 @@ loadScripts(document, 'script');</script>
 <h3>add</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">add</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
-<div class="block">Return a new PiSlice with each component being the sum of the respective components of the given PiSlices.</div>
+<div class="block">Return a new PiSlice with each component being the sum of the respective
+ components of the given PiSlices.</div>
 </section>
 </li>
 <li>
@@ -289,7 +304,8 @@ loadScripts(document, 'script');</script>
 <h3>sub</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">sub</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
-<div class="block">Return a new PiSlice with each component being the difference of the respective components of the given PiSlices.</div>
+<div class="block">Return a new PiSlice with each component being the difference of the
+ respective components of the given PiSlices.</div>
 </section>
 </li>
 <li>
@@ -297,7 +313,8 @@ loadScripts(document, 'script');</script>
 <h3>mult</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">mult</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
-<div class="block">Return a new PiSlice with each component being the product of the respective components of the given PiSlices.</div>
+<div class="block">Return a new PiSlice with each component being the product of the respective
+ components of the given PiSlices.</div>
 </section>
 </li>
 <li>
@@ -305,7 +322,8 @@ loadScripts(document, 'script');</script>
 <h3>div</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PiSlice.html" title="class in lol.pislice">PiSlice</a></span>&nbsp;<span class="element-name">div</span><wbr><span class="parameters">(<a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p1,
  <a href="PiSlice.html" title="class in lol.pislice">PiSlice</a>&nbsp;p2)</span></div>
-<div class="block">Return a new PiSlice with each component being the quotient of the respective components of the given PiSlices.</div>
+<div class="block">Return a new PiSlice with each component being the quotient of the respective
+ components of the given PiSlices.</div>
 </section>
 </li>
 <li>
@@ -318,7 +336,8 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>long</dd>
 <dt>Throws:</dt>
-<dd><code><a href="PiSliceException.html" title="class in lol.pislice">PiSliceException</a></code> - if the indices have not been defined or are out of bounds</dd>
+<dd><code><a href="PiSliceException.html" title="class in lol.pislice">PiSliceException</a></code> - if the indices have not been defined or are out of
+                          bounds</dd>
 </dl>
 </section>
 </li>
@@ -332,7 +351,8 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>int</dd>
 <dt>Throws:</dt>
-<dd><code><a href="PiSliceException.html" title="class in lol.pislice">PiSliceException</a></code> - if the indices have not been defined or are out of bounds</dd>
+<dd><code><a href="PiSliceException.html" title="class in lol.pislice">PiSliceException</a></code> - if the indices have not been defined or are out of
+                          bounds</dd>
 </dl>
 </section>
 </li>
@@ -340,7 +360,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="toString()">
 <h3>toString</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
-<div class="block">Returns a String object representing this object's value in a human-friendly format.</div>
+<div class="block">Returns a String object representing this object's value in a human-friendly
+ format.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
