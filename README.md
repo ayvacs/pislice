@@ -28,13 +28,15 @@ To produce a `long` value from a `PiSlice` instance, the `getLong` method may be
 ## Considerations
 
 * The start index should be greater than or equal to 0 and less than the end index
-* The end index should be less than 1000 (the length of the internal `PI_DIGITS` constant, which you can grab with the `getCap()` method)
+* The end index should be less than 65,534 (the length of the internal `PI_DIGITS` constant, which you can grab with the `getCap()` method)
 * A `PiSliceException` will be thrown when things are amiss
 * Keep in mind Java's long limit (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807)
 
 ## Build
 
-Grab a prebuilt .jar from the [releases page](https://github.com/ayvacs/pislice/releases/latest), or build it yourself using gradle
+Grab a prebuilt .jar from the [releases page](https://github.com/ayvacs/pislice/releases/latest), or build it yourself using gradle.
+
+Prebuilt jars are only published for major-ish releases so they will often be missing the last few commits.
 
 ## License
 
