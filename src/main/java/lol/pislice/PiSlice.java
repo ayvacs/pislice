@@ -6,8 +6,10 @@ import java.lang.Math;
 
 /**
  * A <code>PiSlice</code> is a number derived from a substring of π. Internally,
- * <code>PiSlice</code>s are defined by upper and lower "substring boundaries" stored as <code>long</code>s, and are as such
- * subject to the lower and upper boundaries of the <code>long</code> type: -9,223,372,036,854,775,808 to
+ * <code>PiSlice</code>s are defined by upper and lower "substring boundaries"
+ * stored as <code>long</code>s, and are as such
+ * subject to the lower and upper boundaries of the <code>long</code> type:
+ * -9,223,372,036,854,775,808 to
  * 9,223,372,036,854,775,807.
  * <p>
  * To produce a <code>long</code> value from a <code>PiSlice</code> instance,
